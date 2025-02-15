@@ -2,7 +2,6 @@
 
 
 
-// Shaheen (start new game)
 void Hangman::startNewGame(const QString &word) {
     this->word = word;
     displayWord = QString(word.size(), '_');
@@ -19,7 +18,6 @@ void Hangman::guess(QChar letter) {
 
 
 
-    // yoyo (game loop)
     bool correctGuess = false;
     for (int i = 0; i < word.size(); ++i) {
         if (word[i] == letter) {

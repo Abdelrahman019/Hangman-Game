@@ -7,7 +7,7 @@
 #include <QRandomGenerator>
 
 
-// Nour (launching GUI start window and parent widgets)
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -29,7 +29,6 @@ void MainWindow::on_startGameButton_clicked() {
 }
 
 
-//Omar Nagia (the lists of the word and categories)
 QString MainWindow::getRandomWord(const QString &category) {
     QStringList fruits = {"apple", "banana", "cherry", "date", "fig","tomato","watermelon","orange","pomegranate","grapes","blueberry","pineapple"};
     QStringList animals = {"tiger", "elephant", "giraffe", "kangaroo", "penguin","lion","cat","dog","cheetah","dolphin","shark","whale","lobster","crab"};
@@ -61,7 +60,7 @@ void MainWindow::on_guessButton_clicked() {
 }
 
 
-// Abdelrahman (letter borders)
+
 void MainWindow::updateUI() {
     QString displayWord = game.getDisplayWord();
     QGridLayout *gridLayout = static_cast<QGridLayout*>(ui->wordGridLayout);
@@ -98,7 +97,6 @@ void MainWindow::updateUI() {
 
 
 
-//Bassel Hossam ( change hangman image function && game end)
 
 void MainWindow::updateHangmanImage() {
     int attemptsLeft = game.getAttemptsLeft();

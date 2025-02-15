@@ -2,7 +2,6 @@
 #define HANGMAN_H
 #include <QString>
 #include <QSet>
-// nour (classes)
 class Hangman {
 public:
     void startNewGame(const QString &word);
